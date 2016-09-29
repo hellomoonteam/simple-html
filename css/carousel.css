@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+}
+section {
+	margin: 0 auto;
+	width: 70%;
+}
+h1 {
+	font-size: 2rem;
+}
+a {
+	font-size: 1rem;
+}
+/*
+	ISSUES
+	- Setting carousel and card size separately
+	- Not responsive
+*/
+
+/* Carousel */
+.carousel {
+	position: relative;
+	height: 40rem;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 0;
+}
+.carousel_card {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel_card:first-child {
+	transition: margin-left .3s;
+}
+
+/* Carousel Buttons */
+.carousel_back,
+.carousel_next {
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	background: red;
+	border-radius: 2rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-indent: -999rem;
+}
+.carousel_back {
+	left: 2rem;
+}
+.carousel_next {
+	right: 2rem;
+} 
+
+
+/* Style The Cards */
+.carousel { background: rgba(0,0,0,.5); }
+.carousel_card:nth-child(1) { background: rgba(255,0,0,.3); }
+.carousel_card:nth-child(2) { background: rgba(0,255,0,.3); }
+.carousel_card:nth-child(3) { background: rgba(0,0,255,.3); }
