@@ -14,11 +14,6 @@ h1 {
 a {
 	font-size: 1rem;
 }
-/*
-	ISSUES
-	- Setting carousel and card size separately
-	- Not responsive
-*/
 
 /* Carousel */
 .carousel {
@@ -36,6 +31,9 @@ a {
 
 .carousel_card:first-child {
 	transition: margin-left .3s;
+}
+.carousel_card:first-child.no-animate {
+	transition: margin-left 0s;
 }
 
 /* Carousel Buttons */
@@ -61,6 +59,6 @@ a {
 
 /* Style The Cards */
 .carousel { background: rgba(0,0,0,.5); }
-.carousel_card:nth-child(1) { background: rgba(255,0,0,.3); }
-.carousel_card:nth-child(2) { background: rgba(0,255,0,.3); }
-.carousel_card:nth-child(3) { background: rgba(0,0,255,.3); }
+.carousel_card.first { background: rgba(255,0,0,.3); }
+.carousel_card.second { background: rgba(0,255,0,.3); }
+.carousel_card.third { background: rgba(0,0,255,.3); }
