@@ -44,6 +44,10 @@ a {
 	position: absolute;
 	left: 0;
 }
+.carousel_card.is-begining {
+	position: absolute;
+	left: -100%;
+}
 
 /* Carousel Buttons */
 .carousel_back,

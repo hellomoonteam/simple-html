@@ -34,7 +34,7 @@ $(document).ready(function() {
 		if (current == total){
 
 			// Copy first card to the end of strip
-			$('.carousel_strip .carousel_card:first-child').clone().attr('style', '').appendTo('.carousel_strip');
+			$('.carousel_strip .carousel_card:first-child').clone().appendTo('.carousel_strip');
 			
 			// move back to start position after animation
 			setTimeout(function(){
@@ -43,11 +43,23 @@ $(document).ready(function() {
 				$('.carousel .carousel_card:last-child').remove();
 				setTimeout(function(){
 					$('.carousel .carousel_strip').removeClass('no-animate')
-				}, 50);
+				}, 10);
 			}, 333);
 
 		} else if (current == -1) {
-			//$('.carousel .carousel_card:last-child').addClass('is-end');
+			// Copy last card to the begining of strip
+			$('.carousel_strip .carousel_card:last-child').clone().appendTo('.carousel_strip').addClass('is-begining');
+			
+			// move back to start position after animation
+			setTimeout(function(){
+				current = total-1;
+
+				$('.carousel .carousel_strip').css('left', current * -100 + '%').addClass('no-animate');
+				$('.carousel_strip .carousel_card.is-begining').remove();
+				setTimeout(function(){
+					$('.carousel .carousel_strip').removeClass('no-animate')
+				}, 10);
+			}, 333);
 		}
 
 		// Move the card strip
