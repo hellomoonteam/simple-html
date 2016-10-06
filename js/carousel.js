@@ -34,23 +34,25 @@ $(document).ready(function() {
 		if (current == total){
 
 			// Copy first card to the end of strip
-			$('.carousel .carousel_card:first-child').clone().attr('style', '').appendTo('.carousel');
+			$('.carousel_strip .carousel_card:first-child').clone().attr('style', '').appendTo('.carousel_strip');
 			
 			// move back to start position after animation
 			setTimeout(function(){
 				current = 0;
-				$('.carousel .carousel_card:first-child').css('margin-left', '0').addClass('no-animate');
+				$('.carousel .carousel_strip').css('left', '0').addClass('no-animate');
 				$('.carousel .carousel_card:last-child').remove();
 				setTimeout(function(){
-					$('.carousel .carousel_card:first-child').removeClass('no-animate')
+					$('.carousel .carousel_strip').removeClass('no-animate')
 				}, 50);
 			}, 333);
 
+		} else if (current == -1) {
+			//$('.carousel .carousel_card:last-child').addClass('is-end');
 		}
 
 		// Move the card strip
 		newMargin = current * -100 + '%';
-		$('.carousel .carousel_card:first-child').css('margin-left', newMargin);
+		$('.carousel .carousel_strip').css('left', newMargin);
 
 	}
 });

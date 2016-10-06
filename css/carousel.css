@@ -23,17 +23,26 @@ a {
 	white-space: nowrap;
 	font-size: 0;
 }
+.carousel_strip {
+	position: relative;
+	left: 0;
+	height: 100%;
+}
 .carousel_card {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
 
-.carousel_card:first-child {
-	transition: margin-left .3s;
+.carousel_strip {
+	transition: left .3s;
 }
-.carousel_card:first-child.no-animate {
-	transition: margin-left 0s;
+.carousel_strip.no-animate {
+	transition: left 0s;
+}
+.carousel_card.is-end {
+	position: absolute;
+	left: 0;
 }
 
 /* Carousel Buttons */
