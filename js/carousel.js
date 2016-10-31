@@ -40,7 +40,6 @@ $(document).ready(function() {
 				current = 0;
 				$('.carousel .carousel_strip').css('left', '0').addClass('no-animate');
 				$('.carousel .carousel_card:last-child').remove();
-<<<<<<< HEAD
 				setTimeout(function(){
 					$('.carousel .carousel_strip').removeClass('no-animate')
 				}, 10);
@@ -66,14 +65,12 @@ $(document).ready(function() {
 		newMargin = current * -100 + '%';
 		$('.carousel .carousel_strip').css('left', newMargin);
 
-=======
 				setTimeout(function(){$('.carousel .carousel_card:first-child').removeClass('no-animate')}, 50);
 			}, 333);
 		}
 
 		// Move the card strip
 		$('.carousel .carousel_card:first-child').css('margin-left', current * -100 + '%');
->>>>>>> 726e94cad6b2c24d231ca572093adfdcd47931b7
 	}
 });
 
