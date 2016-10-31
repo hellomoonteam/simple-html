@@ -1,12 +1,14 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 html {
 	font-size: 10px;
 }
 section {
-	margin: 0 auto;
-	width: 70%;
+	margin: auto;
+	width: 100%;
 }
 h1 {
 	font-size: 2rem;
@@ -55,20 +57,33 @@ a {
 	display: block;
 	width: 4rem;
 	height: 4rem;
-	background: red;
-	border-radius: 2rem;
+	/*background: red;*/
+	/*border-radius: 2rem;*/
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	text-indent: -999rem;
+	text-indent: 0rem;
 }
 .carousel_back {
-	left: 2rem;
+	left: .5rem;
 }
 .carousel_next {
-	right: 2rem;
+	right: .5rem;
 } 
 
+/*Current card dots*/
+/*.dots{
+	height: 3rem;
+	width: 3rem;
+	background: black;
+	border: solid 5px black;
+	position: absolute;
+	bottom: 5rem;
+	left: 15rem;
+}
+.dot1{
+	margin: 1rem;
+}*/
 
 /* Style The Cards */
 .carousel { background: rgba(0,0,0,.5); }
