@@ -21,6 +21,7 @@ $(document).ready(function() {
 
 
 	function cardNav(direction) {
+		var newMargin;
 		
 		// Increment/Decrement the current card 
 		if (direction === 'next'){
@@ -29,13 +30,13 @@ $(document).ready(function() {
 			current -= 1;
 		}
 
-		// If we are going from last to first card
+		// If we are on the last card
 		if (current == total){
 
 			// Copy first card to the end of strip
 			$('.carousel_strip .carousel_card:first-child').clone().appendTo('.carousel_strip');
 			
-			// Move cards back to start position after animation between last and first
+			// move back to start position after animation
 			setTimeout(function(){
 				current = 0;
 				$('.carousel .carousel_strip').css('left', '0').addClass('no-animate');
@@ -65,12 +66,6 @@ $(document).ready(function() {
 		newMargin = current * -100 + '%';
 		$('.carousel .carousel_strip').css('left', newMargin);
 
-				setTimeout(function(){$('.carousel .carousel_card:first-child').removeClass('no-animate')}, 50);
-			}, 333);
-		}
-
-		// Move the card strip
-		$('.carousel .carousel_card:first-child').css('margin-left', current * -100 + '%');
 	}
 });
 
